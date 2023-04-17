@@ -22,16 +22,11 @@ class Vector:
     
     def __abs__(self):
         return Vector(abs(self.x_crd) , abs(self.y_crd) , abs(self.z_crd))
-    """
-    def __next__(self):
-        data = ('x', 'y', 'z')
-        i = -1
-        if i < 2:
-            i += 1
-            return exec(f'self.{data[i]}_crd')
-        else:
-            StopIteration
-
+    
     def __iter__(self):
-        return self
-    """
+        yield self.x_crd
+        yield self.y_crd
+        yield self.z_crd
+    
+    def __str__(self) -> str:
+        return f"|{self.x_crd}, {self.y_crd}, {self.z_crd}|"
