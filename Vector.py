@@ -30,3 +30,6 @@ class Vector:
     
     def __str__(self) -> str:
         return f"|{self.x_crd}, {self.y_crd}, {self.z_crd}|"
+
+    def __lt__(self, other):
+        return self.x_crd < other.x_crd or self.y_crd < other.y_crd or self.z_crd < other.z_crd

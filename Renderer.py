@@ -7,7 +7,8 @@ def transpose(lst):
 
 
 def render_list(lst):
-    ax.plot3D(transpose(lst))
+    
+    ax.plot3D(*transpose(lst))
 
     ax.set_xlabel("X label")
     ax.set_ylabel("Y label")
